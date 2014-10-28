@@ -1,0 +1,41 @@
+Source: ethereum
+Section: science
+Priority: extra
+Maintainer: caktux <caktux@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webkit5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
+Standards-Version: 3.9.4
+Homepage: http://ethereum.org
+#Vcs-Git: git://git.debian.org/collab-maint/cpp-ethereum.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/cpp-ethereum.git;a=summary
+
+Package: ethereum
+Architecture: any
+Depends: ethereum-eth, ethereum-alethzero
+Description: A meta package for command line daemon and reference GUI
+ A long description of ethereum
+
+Package: ethereum-eth
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum
+Description: The command line daemon
+ A long description of ethereum
+
+Package: libethereum
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webkit5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
+Description: The future of computational social contracts.
+ A long description of libethereum.
+
+Package: libethereum-dev
+Section: libdevel
+Architecture: any
+Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webkit5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
+Description: The future of computational social contracts. Dev Files.
+ A long description of libethereum. Dev Files.
+
+Package: ethereum-alethzero
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
+Description: The Qt-based Ethereum GUI.
+ A long description of alethzero.

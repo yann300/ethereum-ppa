@@ -8,7 +8,7 @@ version=$5
 repo=$6
 
 if [ "$repo" == "" ]; then
-	repo="markobarko/ethereum"
+	repo="ethereum/cpp-ethereum"
 fi
 
 # Prepare version information and names
