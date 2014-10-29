@@ -21,7 +21,9 @@ export DH_OPTIONS
 	dh $@
 
 override_dh_auto_configure:
-	cmake . #-DCMAKE_INSTALL_PREFIX=$(CURDIR)/debian/libethereum-dev/usr .
+	cmake . -DCMAKE_BUILD_TYPE=Release
+
+override_dh_auto_test:
 
 #override_dh_auto_build:
 #	$(MAKE) -j8
