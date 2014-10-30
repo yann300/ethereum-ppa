@@ -1,4 +1,4 @@
-Source: libcrypto++
+Source: libcryptopp
 Section: libs
 Priority: optional
 Maintainer: Vincent Gariepy (caktux) <caktux@gmail.com>
@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 8), scons
 Build-Depends-Indep: doxygen
 Homepage: http://www.cryptopp.com
 
-Package: libcrypto++-dev
+Package: libcryptopp-dev
 Architecture: any
 Section: libdevel
 Depends: ${misc:Depends}
@@ -43,7 +43,7 @@ Description: General purpose cryptographic library - C++ development
  the Crypto++ class library and the static library with libtool
  supoport.
 
-Package: libcrypto++-utils
+Package: libcryptopp-utils
 Architecture: any
 Section: utils
 Depends: ${shlibs:Depends}, ${misc:Depends}

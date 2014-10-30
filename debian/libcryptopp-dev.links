@@ -1,0 +1,3 @@
+/usr/include/crypto++ /usr/include/cryptopp
+#/usr/lib/libcryptopp.a /usr/lib/libcrypto++.a
+/usr/lib/libcryptopp.so /usr/lib/libcrypto++.so
