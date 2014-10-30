@@ -1,0 +1,2 @@
+target/include/cryptopp/*.h usr/include/crypto++
+target/lib/*.so
