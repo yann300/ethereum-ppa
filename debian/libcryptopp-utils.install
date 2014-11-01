@@ -1,3 +1,0 @@
-#usr/bin/cryptest
-src/TestData usr/share/crypto++
-src/TestVectors usr/share/crypto++
