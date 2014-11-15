@@ -1,7 +1,7 @@
 Source: libcryptopp
 Section: libs
 Priority: optional
-Maintainer: Vincent Gariepy (caktux) <caktux@gmail.com>
+Maintainer: caktux (Buildserver key) <caktux@gmail.com>
 Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 8), scons
 Build-Depends-Indep: doxygen
