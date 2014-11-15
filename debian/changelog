@@ -1,4 +1,4 @@
-libjson-rpc-cpp (0.2.1-0) trusty; urgency=low
+libjson-rpc-cpp (0.2.1-0~trusty0) trusty; urgency=low
 
   * Package of libjson-rpc-cpp at eaca2481e2889d5a5b748383fb02b1d395969cd4
 
