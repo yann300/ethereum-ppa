@@ -1,7 +1,7 @@
 Source: libjson-rpc-cpp
 Section: libs
 Priority: optional
-Maintainer: Vincent Gariepy (caktux) <caktux@gmail.com>
+Maintainer: caktux (Buildserver key) <caktux@gmail.com>
 Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 8), cmake, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
 Build-Depends-Indep: doxygen
