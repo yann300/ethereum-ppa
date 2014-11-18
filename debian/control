@@ -10,14 +10,8 @@ Homepage: http://ethereum.org
 
 Package: ethereum
 Architecture: any
-Depends: ethereum-eth, ethereum-alethzero
-Description: A meta package for command line daemon and reference GUI
- A long description of ethereum
-
-Package: ethereum-eth
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum
-Description: The command line daemon
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
+Description: Command line daemon, reference GUI, compilers and other binaries
  A long description of ethereum
 
 Package: libethereum
@@ -33,9 +27,3 @@ Architecture: any
 Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webkit5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
 Description: The future of computational social contracts. Dev Files.
  A long description of libethereum. Dev Files.
-
-Package: ethereum-alethzero
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
-Description: The Qt-based Ethereum GUI.
- A long description of alethzero.

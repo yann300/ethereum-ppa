@@ -1,1 +1,1 @@
-lib*/*.h /usr/include/libethereum
+usr/local/include/* usr/include/libethereum

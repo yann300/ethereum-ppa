@@ -1,3 +1,9 @@
+ethereum (0.3.11-0~trusty1) trusty; urgency=low
+
+  * Version 0.3.11
+
+ -- Marko Simovic (Personal Key) <markobarko@gmail.com>  Tue, 04 Mar 2014 02:04:04 +0000
+
 ethereum (0.1.0-1) saucy; urgency=low
 
   * Various improvements moving towards PoC-2.
