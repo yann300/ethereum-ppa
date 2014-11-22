@@ -1,4 +1,10 @@
-go-ethereum (0.6.7-33~trusty0) trusty; urgency=low
+go-ethereum (0.7.5-0~trusty0) trusty; urgency=low
+
+  * PoC 7
+
+ --  caktux (Buildserver key) <caktux@gmail.com>  Sat, 22 Nov 2014 11:03:24 +0000
+
+ go-ethereum (0.6.7-33~trusty0) trusty; urgency=low
 
   * Version 0.6.7
 

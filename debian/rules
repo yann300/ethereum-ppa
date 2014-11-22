@@ -13,8 +13,8 @@ export DH_GOLANG_INSTALL_ALL := 1
 export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)
 
 override_dh_auto_build:
-	go build -v github.com/ethereum/go-ethereum/ethereum
-	go build -v github.com/ethereum/go-ethereum/mist
+	go build -v github.com/ethereum/go-ethereum/cmd/ethereum
+	go build -v github.com/ethereum/go-ethereum/cmd/mist
 
 # just install binaries and copy assets
 override_dh_auto_install:
