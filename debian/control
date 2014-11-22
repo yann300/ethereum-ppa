@@ -1,29 +1,22 @@
-Source: ethereum
+Source: go-ethereum
 Section: science
 Priority: extra
 Maintainer: caktux (Buildserver key) <caktux@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webkit5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
+Build-Depends: debhelper (>= 8.0.0),
+               dh-golang,
+               golang,
+               golang-godebiancontrol-dev,
+               libgmp3-dev,
+               libreadline6-dev,
+               ubuntu-sdk, qtbase5-private-dev, qtdeclarative5-private-dev, libqt5opengl5-dev, qtdeclarative5-dialogs-plugin
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
 #Vcs-Git: git://git.debian.org/collab-maint/cpp-ethereum.git
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/cpp-ethereum.git;a=summary
 
-Package: ethereum
+Package: go-ethereum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
-Description: Command line daemon, reference GUI, compilers and other binaries
- A long description of ethereum
-
-Package: libethereum
-Section: libdevel
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webkit5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
-Description: The future of computational social contracts.
- A long description of libethereum.
-
-Package: libethereum-dev
-Section: libdevel
-Architecture: any
-Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webkit5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
-Description: The future of computational social contracts. Dev Files.
- A long description of libethereum. Dev Files.
+Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg-dev, ubuntu-sdk, qtbase5-private-dev, qtdeclarative5-private-dev, libqt5opengl5-dev, qtdeclarative5-dialogs-plugin
+Built-Using: ${misc:Built-Using}
+Description: Ethereum Go client
+ Mist (Ether browser) and ethereum command line client.
