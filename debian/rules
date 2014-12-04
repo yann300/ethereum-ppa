@@ -19,7 +19,7 @@ override_dh_auto_build:
 # just install binaries and copy assets
 override_dh_auto_install:
 	mkdir -p debian/tmp/usr/share/mist
-	cp -a github.com/ethereum/go-ethereum/mist/assets/* debian/tmp/usr/share/mist/
+	cp -a github.com/ethereum/go-ethereum/cmd/mist/assets/* debian/tmp/usr/share/mist/
 
 override_dh_auto_test:
 
