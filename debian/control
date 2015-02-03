@@ -8,7 +8,9 @@ Build-Depends: debhelper (>= 8.0.0),
                golang-godebiancontrol-dev,
                libgmp3-dev,
                libreadline6-dev,
-               ubuntu-sdk, qtbase5-private-dev, qtdeclarative5-private-dev, libqt5opengl5-dev, qtdeclarative5-dialogs-plugin
+               pkg-config, libpcre3-dev, libpcre++-dev,
+               mesa-common-dev, libglu1-mesa-dev,
+               qt54quickcontrols, qt54webengine
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
 #Vcs-Git: git://git.debian.org/collab-maint/cpp-ethereum.git
@@ -16,7 +18,7 @@ Homepage: http://ethereum.org
 
 Package: go-ethereum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, dpkg-dev, ubuntu-sdk, qtbase5-private-dev, qtdeclarative5-private-dev, libqt5opengl5-dev, qtdeclarative5-dialogs-plugin
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Built-Using: ${misc:Built-Using}
 Description: Ethereum Go client
  Mist (Ether browser) and ethereum command line client.
