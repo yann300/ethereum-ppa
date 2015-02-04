@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 8.0.0),
                libreadline6-dev,
                pkg-config, libpcre3-dev, libpcre++-dev,
                mesa-common-dev, libglu1-mesa-dev,
-               qt54quickcontrols, qt54webengine
+               qt54-meta-full
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
 #Vcs-Git: git://git.debian.org/collab-maint/cpp-ethereum.git
