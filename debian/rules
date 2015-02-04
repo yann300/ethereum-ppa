@@ -12,10 +12,9 @@ export DH_GOLANG_INSTALL_ALL := 1
 # temporary build path
 export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)
 
-# Qt 5.4 environment variables
-source /opt/qt54/bin/qt54-env.sh
-
 override_dh_auto_build:
+	# Qt 5.4 environment variables
+	source /opt/qt54/bin/qt54-env.sh
 	go build -v github.com/ethereum/go-ethereum/cmd/ethereum
 	go build -v github.com/ethereum/go-ethereum/cmd/mist
 
