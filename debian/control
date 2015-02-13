@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: caktux (Buildserver key) <caktux@gmail.com>
 Standards-Version: 3.9.5
-Build-Depends: debhelper (>= 8), cmake, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libboost-test-dev
+Build-Depends: debhelper (>= 8), cmake, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev
 Build-Depends-Indep: doxygen
 Homepage: https://github.com/cinemast/libjson-rpc-cpp
 
