@@ -23,7 +23,7 @@ override_dh_auto_build:
 override_dh_auto_install:
 	# Set Qt 5.4 in /etc/ld.so.conf.d because others were too lazy
 	install -dm755 debian/tmp/etc/ld.so.conf.d/
-	echo "/opt/qt54/lib" > debian/tmp/etc/ld.so.conf.d/$(DEB_BUILD_GNU_TYPE)-qt54.conf
+	echo "/opt/qt54/lib" > debian/tmp/etc/ld.so.conf.d/$(DEB_BUILD_GNU_TYPE)_qt54.conf
 
 	# just install binaries and copy assets
 	mkdir -p debian/tmp/usr/share/mist
