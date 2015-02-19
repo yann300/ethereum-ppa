@@ -10,7 +10,7 @@ export DH_VERBOSE=1
 export DH_GOLANG_INSTALL_ALL := 1
 
 # temporary build path
-export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE):$(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)/Godeps/_workspace
+export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE):$(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)/src/github.com/ethereum/go-ethereum/Godeps/_workspace
 
 # Qt 5.4 environment variables
 export LD_LIBRARY_PATH := /opt/qt54/lib/x86_64-linux-gnu:/opt/qt54/lib:$(LD_LIBRARY_PATH)
