@@ -1,8 +1,16 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+# Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
+
 export DEB_DH_MAKESHLIBS_ARG=--ignore-missing-info
+
+export QT_SELECT := qt5
+
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 
 %:
 	dh $@
@@ -10,9 +18,14 @@ export DEB_DH_MAKESHLIBS_ARG=--ignore-missing-info
 override_dh_auto_configure:
 	qmake
 
-override_dh_auto_build:
-	make -j$(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+override_dh_auto_build-arch:
+  make -j$(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 
-override_dh_auto_install:
+override_dh_auto_build-indep:
+	dh_auto_build -Smakefile -- html_docs
+
+override_dh_auto_install-arch:
 	make install INSTALL_ROOT=$(CURDIR)/debian/tmp
+
+override_dh_auto_install-indep:
 	make INSTALL_ROOT=$(CURDIR)/debian/tmp install_html_docs
