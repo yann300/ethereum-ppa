@@ -1,4 +1,4 @@
-qtwebengine-opensource-src (5.4.0+dfsg-1ubuntu1) trusty; urgency=low
+qtwebengine-opensource-src (5.4.0) trusty; urgency=low
 
   [ caktux ]
   * Initial release for Ethereum's ethereum-qt PPA
