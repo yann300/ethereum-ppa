@@ -1,0 +1,11 @@
+--- a/src/3rdparty/chromium/tools/gyp/pylib/gyp/input.py	2014/05/22 18:23:24	1.1
++++ b/src/3rdparty/chromium/tools/gyp/pylib/gyp/input.py	2014/05/22 18:24:36
+@@ -2441,7 +2441,7 @@
+     print('static library %s has several files with the same basename:\n' %
+           target + error + 'Some build systems, e.g. MSVC08, '
+           'cannot handle that.')
+-    raise GypError('Duplicate basenames in sources section, see list above')
++#    raise GypError('Duplicate basenames in sources section, see list above')
+ 
+ 
+ def ValidateRulesInTarget(target, target_dict, extra_sources_for_rules):
