@@ -1,0 +1,6 @@
+qtwebengine-opensource-src (5.4.0+dfsg-1ubuntu1) trusty; urgency=low
+
+  [ caktux ]
+  * Initial release for Ethereum's ethereum-qt PPA
+
+ -- caktux (Buildserver key) <caktux@gmail.com>  Sat, 08 Mar 2015 09:34:49 +0000
