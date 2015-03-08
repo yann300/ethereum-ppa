@@ -113,18 +113,6 @@ Description: Qt WebEngine QML module
  .
  This package contains the WebEngine QML module for QtDeclarative.
 
-Package: libqt5webengine5-dbg
-Priority: extra
-Architecture: amd64 i386 powerpc s390x
-Multi-Arch: same
-Section: debug
-Depends: libqt5webengine5 (= ${binary:Version}), ${misc:Depends}
-Description: Web content engine library for Qt - debugging symbols
- QtWebEngine provides a Web browser engine that makes it easy to embed content
- from the World Wide Web into your Qt application.
- .
- This package contains the debugging symbols for the Qt WebEngine library.
-
 Package: qtwebengine5-doc-html
 Priority: extra
 Architecture: all
