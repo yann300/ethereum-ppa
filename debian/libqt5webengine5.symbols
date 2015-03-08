@@ -1,5 +1,5 @@
 # SymbolsHelper-Confirmed: 5.4.0 ppc64el
-libQt5WebKit.so.5 libqt5webkit5 #MINVER#
+libQt5WebEngine.so.5 libqt5webengine5 #MINVER#
  JSCheckScriptSyntax@Base 5.0.2
  JSClassCreate@Base 5.0.2
  JSClassRelease@Base 5.0.2
@@ -850,7 +850,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  WKPreferencesGetHixie76WebSocketProtocolEnabled@Base 5.0.2
  WKPreferencesGetHyperlinkAuditingEnabled@Base 5.0.2
  WKPreferencesGetIncrementalRenderingSuppressionTimeout@Base 5.2.0
- WKPreferencesGetInspectorUsesWebKitUserInterface@Base 5.0.2
+ WKPreferencesGetInspectorUsesWebEngineUserInterface@Base 5.0.2
  WKPreferencesGetInteractiveFormValidationEnabled@Base 5.0.2
  WKPreferencesGetJavaEnabled@Base 5.0.2
  WKPreferencesGetJavaEnabledForLocalFiles@Base 5.0.2
@@ -880,7 +880,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  WKPreferencesGetPluginsEnabled@Base 5.0.2
  WKPreferencesGetPrimaryPlugInSnapshotDetectionEnabled@Base 5.2.0
  WKPreferencesGetPrivateBrowsingEnabled@Base 5.0.2
- WKPreferencesGetQTKitEnabled@Base 5.2.0
+ WKPreferencesGetQTEngineEnabled@Base 5.2.0
  WKPreferencesGetRegionBasedColumnsEnabled@Base 5.0.2
  WKPreferencesGetRequestAnimationFrameEnabled@Base 5.0.2
  WKPreferencesGetScreenFontSubstitutionEnabled@Base 5.0.2
@@ -956,7 +956,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  WKPreferencesSetHixie76WebSocketProtocolEnabled@Base 5.0.2
  WKPreferencesSetHyperlinkAuditingEnabled@Base 5.0.2
  WKPreferencesSetIncrementalRenderingSuppressionTimeout@Base 5.2.0
- WKPreferencesSetInspectorUsesWebKitUserInterface@Base 5.0.2
+ WKPreferencesSetInspectorUsesWebEngineUserInterface@Base 5.0.2
  WKPreferencesSetInteractiveFormValidationEnabled@Base 5.0.2
  WKPreferencesSetJavaEnabled@Base 5.0.2
  WKPreferencesSetJavaEnabledForLocalFiles@Base 5.0.2
@@ -987,7 +987,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  WKPreferencesSetPluginsEnabled@Base 5.0.2
  WKPreferencesSetPrimaryPlugInSnapshotDetectionEnabled@Base 5.2.0
  WKPreferencesSetPrivateBrowsingEnabled@Base 5.0.2
- WKPreferencesSetQTKitEnabled@Base 5.2.0
+ WKPreferencesSetQTEngineEnabled@Base 5.2.0
  WKPreferencesSetRegionBasedColumnsEnabled@Base 5.0.2
  WKPreferencesSetRequestAnimationFrameEnabled@Base 5.0.2
  WKPreferencesSetSansSerifFontFamily@Base 5.0.2
@@ -1147,14 +1147,14 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _WKContextSetAlwaysUsesComplexTextCodePath@Base 5.0.2
  _WKContextSetHTTPPipeliningEnabled@Base 5.0.2
  _Z13WKURLCopyQUrlPK11OpaqueWKURL@Base 5.2.0
- _Z14qWebKitVersionv@Base 5.0.2
+ _Z14qWebEngineVersionv@Base 5.0.2
  _Z16WKURLCopyQStringPK11OpaqueWKURL@Base 5.2.0
  _Z19JSStringCopyQStringP14OpaqueJSString@Base 5.2.0
  _Z19WKImageCreateQImagePK13OpaqueWKImage@Base 5.0.2
  _Z19WKStringCopyQStringPK14OpaqueWKString@Base 5.0.2
  _Z19WKURLCreateWithQUrlRK4QUrl@Base 5.0.2
- _Z19qWebKitMajorVersionv@Base 5.0.2
- _Z19qWebKitMinorVersionv@Base 5.0.2
+ _Z19qWebEngineMajorVersionv@Base 5.0.2
+ _Z19qWebEngineMinorVersionv@Base 5.0.2
  _Z22WKURLCreateWithQStringRK7QString@Base 5.2.0
  _Z23WKImageCreateFromQImageRK6QImage@Base 5.0.2
  _Z23qt_networkAccessAllowedb@Base 5.0.2
@@ -1237,23 +1237,23 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _ZN11QWebHistoryC2Ev@Base 5.0.2
  _ZN11QWebHistoryD1Ev@Base 5.0.2
  _ZN11QWebHistoryD2Ev@Base 5.0.2
- _ZN11QWebKitTest10wheelEventEP7QObjectddiN2Qt11OrientationE@Base 5.2.0
- _ZN11QWebKitTest11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
- _ZN11QWebKitTest11qt_metacastEPKc@Base 5.0.2
- _ZN11QWebKitTest14sendTouchEventEP13QQuickWebViewN6QEvent4TypeERK5QListIN11QTouchEvent10TouchPointEEm@Base 5.0.2
- _ZN11QWebKitTest14touchDoubleTapEP7QObjectddi@Base 5.2.0
- _ZN11QWebKitTest15viewportChangedEv@Base 5.0.2
- _ZN11QWebKitTest16staticMetaObjectE@Base 5.0.2
- _ZN11QWebKitTest19contentsSizeChangedEv@Base 5.0.2
- _ZN11QWebKitTest20contentsScaleChangedEv@Base 5.0.2
- _ZN11QWebKitTest22contentsScaleCommittedEv@Base 5.0.2
- _ZN11QWebKitTest23devicePixelRatioChangedEv@Base 5.0.2
- _ZN11QWebKitTest8touchTapEP7QObjectddi@Base 5.2.0
- _ZN11QWebKitTestC1EP20QQuickWebViewPrivateP7QObject@Base 5.0.2
- _ZN11QWebKitTestC2EP20QQuickWebViewPrivateP7QObject@Base 5.0.2
- _ZN11QWebKitTestD0Ev@Base 5.0.2
- _ZN11QWebKitTestD1Ev@Base 5.0.2
- _ZN11QWebKitTestD2Ev@Base 5.0.2
+ _ZN11QWebEngineTest10wheelEventEP7QObjectddiN2Qt11OrientationE@Base 5.2.0
+ _ZN11QWebEngineTest11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
+ _ZN11QWebEngineTest11qt_metacastEPKc@Base 5.0.2
+ _ZN11QWebEngineTest14sendTouchEventEP13QQuickWebViewN6QEvent4TypeERK5QListIN11QTouchEvent10TouchPointEEm@Base 5.0.2
+ _ZN11QWebEngineTest14touchDoubleTapEP7QObjectddi@Base 5.2.0
+ _ZN11QWebEngineTest15viewportChangedEv@Base 5.0.2
+ _ZN11QWebEngineTest16staticMetaObjectE@Base 5.0.2
+ _ZN11QWebEngineTest19contentsSizeChangedEv@Base 5.0.2
+ _ZN11QWebEngineTest20contentsScaleChangedEv@Base 5.0.2
+ _ZN11QWebEngineTest22contentsScaleCommittedEv@Base 5.0.2
+ _ZN11QWebEngineTest23devicePixelRatioChangedEv@Base 5.0.2
+ _ZN11QWebEngineTest8touchTapEP7QObjectddi@Base 5.2.0
+ _ZN11QWebEngineTestC1EP20QQuickWebViewPrivateP7QObject@Base 5.0.2
+ _ZN11QWebEngineTestC2EP20QQuickWebViewPrivateP7QObject@Base 5.0.2
+ _ZN11QWebEngineTestD0Ev@Base 5.0.2
+ _ZN11QWebEngineTestD1Ev@Base 5.0.2
+ _ZN11QWebEngineTestD2Ev@Base 5.0.2
  _ZN12QWebDatabase14removeDatabaseERKS_@Base 5.0.2
  _ZN12QWebDatabase18removeAllDatabasesEv@Base 5.0.2
  _ZN12QWebDatabaseC1EP19QWebDatabasePrivate@Base 5.0.2
@@ -1586,7 +1586,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _ZN18QQuickNetworkReply11qt_metacastEPKc@Base 5.0.2
  _ZN18QQuickNetworkReply14setContentTypeERK7QString@Base 5.0.2
  _ZN18QQuickNetworkReply16staticMetaObjectE@Base 5.0.2
- _ZN18QQuickNetworkReply21setNetworkRequestDataEN3WTF10PassRefPtrIN6WebKit30QtRefCountedNetworkRequestDataEEE@Base 5.0.2
+ _ZN18QQuickNetworkReply21setNetworkRequestDataEN3WTF10PassRefPtrIN6WebEngine30QtRefCountedNetworkRequestDataEEE@Base 5.0.2
  _ZN18QQuickNetworkReply22setWebViewExperimentalEP25QQuickWebViewExperimental@Base 5.0.2
  _ZN18QQuickNetworkReply4sendEv@Base 5.0.2
  _ZN18QQuickNetworkReply7setDataERK8QVariant@Base 5.0.2
@@ -1637,7 +1637,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _ZN20QQuickNetworkRequest11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
  _ZN20QQuickNetworkRequest11qt_metacastEPKc@Base 5.0.2
  _ZN20QQuickNetworkRequest16staticMetaObjectE@Base 5.0.2
- _ZN20QQuickNetworkRequest21setNetworkRequestDataEN3WTF10PassRefPtrIN6WebKit30QtRefCountedNetworkRequestDataEEE@Base 5.0.2
+ _ZN20QQuickNetworkRequest21setNetworkRequestDataEN3WTF10PassRefPtrIN6WebEngine30QtRefCountedNetworkRequestDataEEE@Base 5.0.2
  _ZN20QQuickNetworkRequestC1EP7QObject@Base 5.0.2
  _ZN20QQuickNetworkRequestC2EP7QObject@Base 5.0.2
  _ZN20QQuickNetworkRequestD0Ev@Base 5.0.2
@@ -1674,7 +1674,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _ZN21QWebElementCollectionD2Ev@Base 5.0.2
  _ZN21QWebElementCollectionaSERKS_@Base 5.0.2
  _ZN21QWebIconImageProvider12requestImageERK7QStringP5QSizeRKS3_@Base 5.0.2
- _ZN21QWebIconImageProvider26iconURLForPageURLInContextERK7QStringPN6WebKit12QtWebContextE@Base 5.2.0
+ _ZN21QWebIconImageProvider26iconURLForPageURLInContextERK7QStringPN6WebEngine12QtWebContextE@Base 5.2.0
  _ZN21QWebIconImageProviderC1Ev@Base 5.0.2
  _ZN21QWebIconImageProviderC2Ev@Base 5.0.2
  _ZN21QWebIconImageProviderD0Ev@Base 5.0.2
@@ -1888,7 +1888,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _ZN25QQuickWebViewExperimental28processDidBecomeUnresponsiveEv@Base 5.2.0
  _ZN25QQuickWebViewExperimental28setProxyAuthenticationDialogEP13QQmlComponent@Base 5.0.2
  _ZN25QQuickWebViewExperimental28setUseDefaultContentItemSizeEb@Base 5.0.2
- _ZN25QQuickWebViewExperimental30invokeApplicationSchemeHandlerEN3WTF10PassRefPtrIN6WebKit30QtRefCountedNetworkRequestDataEEE@Base 5.0.2
+ _ZN25QQuickWebViewExperimental30invokeApplicationSchemeHandlerEN3WTF10PassRefPtrIN6WebEngine30QtRefCountedNetworkRequestDataEEE@Base 5.0.2
  _ZN25QQuickWebViewExperimental32proxyAuthenticationDialogChangedEv@Base 5.0.2
  _ZN25QQuickWebViewExperimental32setCertificateVerificationDialogEP13QQmlComponent@Base 5.0.2
  _ZN25QQuickWebViewExperimental32setPreferredMinimumContentsWidthEi@Base 5.0.2
@@ -2605,11 +2605,11 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _ZN3WTF9xmlnsAtomE@Base 5.0.2
  _ZN3WTFeqERKNS_7CStringEPKc@Base 5.2.0
  _ZN3WTFeqERKNS_7CStringES2_@Base 5.0.2
- _ZN6WebKit16WebProcessMainQtEP15QGuiApplication@Base 5.0.2
- _ZN6WebKit17PluginProcessMainEiPPc@Base 5.0.2
- _ZN6WebKit18initializeWebKitQtEv@Base 5.0.2
- _ZN6WebKit24setImagePlatformResourceEPKcRK7QPixmap@Base 5.0.2
- _ZN6WebKit28setWebKitWidgetsInitCallbackEPFPN7WebCore12QStyleFacadeEP15QWebPageAdapterE@Base 5.0.2
+ _ZN6WebEngine16WebProcessMainQtEP15QGuiApplication@Base 5.0.2
+ _ZN6WebEngine17PluginProcessMainEiPPc@Base 5.0.2
+ _ZN6WebEngine18initializeWebEngineQtEv@Base 5.0.2
+ _ZN6WebEngine24setImagePlatformResourceEPKcRK7QPixmap@Base 5.0.2
+ _ZN6WebEngine28setWebEngineWidgetsInitCallbackEPFPN7WebCore12QStyleFacadeEP15QWebPageAdapterE@Base 5.0.2
  _ZN7WebCore17JSDOMGlobalObject6s_infoE@Base 5.0.2
  _ZN7WebCore19initializeWebCoreQtEv@Base 5.0.2
  _ZN7WebCore6JSNode6s_infoE@Base 5.0.2
@@ -2673,11 +2673,11 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  _ZNK11QWebHistory8backItemEv@Base 5.0.2
  _ZNK11QWebHistory9backItemsEi@Base 5.0.2
  _ZNK11QWebHistory9canGoBackEv@Base 5.0.2
- _ZNK11QWebKitTest10metaObjectEv@Base 5.0.2
- _ZNK11QWebKitTest12contentsSizeEv@Base 5.0.2
- _ZNK11QWebKitTest13contentsScaleEv@Base 5.0.2
- _ZNK11QWebKitTest16devicePixelRatioEv@Base 5.0.2
- _ZNK11QWebKitTest8viewportEv@Base 5.0.2
+ _ZNK11QWebEngineTest10metaObjectEv@Base 5.0.2
+ _ZNK11QWebEngineTest12contentsSizeEv@Base 5.0.2
+ _ZNK11QWebEngineTest13contentsScaleEv@Base 5.0.2
+ _ZNK11QWebEngineTest16devicePixelRatioEv@Base 5.0.2
+ _ZNK11QWebEngineTest8viewportEv@Base 5.0.2
  _ZNK12QWebDatabase11displayNameEv@Base 5.0.2
  _ZNK12QWebDatabase12expectedSizeEv@Base 5.0.2
  _ZNK12QWebDatabase4nameEv@Base 5.0.2
@@ -3364,7 +3364,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  (optional=templinst|arch=sparc)_ZStplIcSt11char_traitsIcE14pool_allocatorIcEESbIT_T0_T1_EOS7_S8_@Base 5.2.1
  (optional=templinst|arch=sparc)_ZStplIcSt11char_traitsIcE14pool_allocatorIcEESbIT_T0_T1_EPKS4_RKS7_@Base 5.2.1
  (optional=templinst|arch=sparc)_ZStplIcSt11char_traitsIcE14pool_allocatorIcEESbIT_T0_T1_ERKS7_S9_@Base 5.2.1
- _ZTI11QWebKitTest@Base 5.0.2
+ _ZTI11QWebEngineTest@Base 5.0.2
  _ZTI13QQuickWebPage@Base 5.0.2
  _ZTI13QQuickWebView@Base 5.0.2
  _ZTI13QSGRenderNode@Base 5.0.2
@@ -3396,7 +3396,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  (arch=sparc)_ZTISt19basic_ostringstreamIcSt11char_traitsIcE14pool_allocatorIcEE@Base 5.2.1
  _ZTIZ26leveldb_writebatch_iterateE1H@Base 5.3.0
  _ZTIZ33leveldb_filterpolicy_create_bloomE7Wrapper@Base 5.3.0
- _ZTS11QWebKitTest@Base 5.0.2
+ _ZTS11QWebEngineTest@Base 5.0.2
  _ZTS13QQuickWebPage@Base 5.0.2
  _ZTS13QQuickWebView@Base 5.0.2
  _ZTS13QSGRenderNode@Base 5.0.2
@@ -3427,7 +3427,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  (arch=sparc)_ZTSSt15basic_stringbufIcSt11char_traitsIcE14pool_allocatorIcEE@Base 5.2.1
  (arch=sparc)_ZTSSt19basic_ostringstreamIcSt11char_traitsIcE14pool_allocatorIcEE@Base 5.2.1
  (arch=sparc)_ZTTSt19basic_ostringstreamIcSt11char_traitsIcE14pool_allocatorIcEE@Base 5.2.1
- _ZTV11QWebKitTest@Base 5.0.2
+ _ZTV11QWebEngineTest@Base 5.0.2
  _ZTV13QQuickWebPage@Base 5.0.2
  _ZTV13QQuickWebView@Base 5.0.2
  _ZTV13QSGRenderNode@Base 5.0.2
@@ -3471,7 +3471,7 @@ libQt5WebKit.so.5 libqt5webkit5 #MINVER#
  (c++)"non-virtual thunk to QQuickWebView::~QQuickWebView()@Base" 5.0.2
  (c++|arch=sparc)"virtual thunk to std::basic_ostringstream<char, std::char_traits<char>, pool_allocator<char> >::~basic_ostringstream()@Base" 5.2.1
 # SymbolsHelper-Confirmed: 5.4.0 amd64
-libQt5WebKitWidgets.so.5 libqt5webkit5 #MINVER#
+libQt5WebEngineWidgets.so.5 libqt5webengine5 #MINVER#
  _ZN13QWebInspector10closeEventEP11QCloseEvent@Base 5.0.2
  _ZN13QWebInspector11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.0.2
  _ZN13QWebInspector11qt_metacastEPKc@Base 5.0.2
@@ -3552,7 +3552,7 @@ libQt5WebKitWidgets.so.5 libqt5webkit5 #MINVER#
  _ZN17QWebHitTestResultD1Ev@Base 5.0.2
  _ZN17QWebHitTestResultD2Ev@Base 5.0.2
  _ZN17QWebHitTestResultaSERKS_@Base 5.0.2
- _ZN6WebKit23initializeWebKitWidgetsEv@Base 5.0.2
+ _ZN6WebEngine23initializeWebEngineWidgetsEv@Base 5.0.2
  _ZN8QWebPage10chooseFileEP9QWebFrameRK7QString@Base 5.0.2
  _ZN8QWebPage10setPaletteERK8QPalette@Base 5.0.2
  _ZN8QWebPage11linkClickedERK4QUrl@Base 5.0.2
