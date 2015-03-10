@@ -12,19 +12,11 @@ export DH_GOLANG_INSTALL_ALL := 1
 # temporary build path
 export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE):$(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)/src/github.com/ethereum/go-ethereum/Godeps/_workspace
 
-# Qt 5.4 environment variables
-export LD_LIBRARY_PATH := /opt/qt54/lib/x86_64-linux-gnu:/opt/qt54/lib:$(LD_LIBRARY_PATH)
-export PKG_CONFIG_PATH := /opt/qt54/lib/pkgconfig:$(PKG_CONFIG_PATH)
-
 override_dh_auto_build:
 	go build -v github.com/ethereum/go-ethereum/cmd/ethereum
-	go build -v github.com/ethereum/go-ethereum/cmd/mist
+	# go build -v github.com/ethereum/go-ethereum/cmd/mist
 
 override_dh_auto_install:
-	# Set Qt 5.4 in /etc/ld.so.conf.d because others were too lazy
-	install -dm755 debian/tmp/etc/ld.so.conf.d/
-	echo "/opt/qt54/lib" > debian/tmp/etc/ld.so.conf.d/$(DEB_BUILD_GNU_TYPE)_qt54.conf
-
 	# just install binaries and copy assets
 	mkdir -p debian/tmp/usr/share/mist
 	cp -a github.com/ethereum/go-ethereum/cmd/mist/assets/* debian/tmp/usr/share/mist/

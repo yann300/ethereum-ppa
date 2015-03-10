@@ -1,4 +1,4 @@
-Source: go-ethereum
+Source: ethereum
 Section: science
 Priority: extra
 Maintainer: caktux (Buildserver key) <caktux@gmail.com>
@@ -9,17 +9,27 @@ Build-Depends: debhelper (>= 8.0.0),
                libgmp3-dev,
                libreadline6-dev,
                pkg-config, libpcre3-dev, libpcre++-dev,
-               mesa-common-dev, libglu1-mesa-dev,
-               qt54quickcontrols (>= 5.4.0-1basyskom),
-               qt54webengine (>= 5.4.0-1basyskom)
+               qt5-default,
+               qtbase5-dev,
+               qtdeclarative5-dev,
+               qml-module-qtquick-controls,
+               qml-module-qtquick-dialogs,
+               # libqt5webengine5-dev
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
-#Vcs-Git: git://git.debian.org/collab-maint/cpp-ethereum.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/cpp-ethereum.git;a=summary
+Vcs-Git: git://github.com/ethereum/go-ethereum.git
+Vcs-Browser: https://github.com/ethereum/go-ethereum
 
-Package: go-ethereum
+Package: ethereum
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Built-Using: ${misc:Built-Using}
 Description: Ethereum Go client
- Mist (Ether browser) and ethereum command line client.
+ Ethereum CLI client.
+
+Package: ethereum-gui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: Ethereum Go client GUI
+ Ethereum GUI client (Mist).
