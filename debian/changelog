@@ -2,7 +2,7 @@ ethereum (0.8.6+13trusty-0ubuntu1) trusty; urgency=low
 
   * git build of 0fd6a22a867ab89cd23e9692e6f3544ce3383dca
 
- -- caktux (Buildserver key) <caktux@gmail.com>   Thu, 26 Feb 2015 19:29:53 +0000
+ -- caktux (Buildserver key) <caktux@gmail.com>  Thu, 26 Feb 2015 19:29:53 +0000
 
 ethereum (0.7.5-0~trusty0) trusty; urgency=low
 
