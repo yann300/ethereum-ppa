@@ -2,13 +2,13 @@ cpp-ethereum (0.8.2+22trusty-0ubuntu1) trusty; urgency=low
 
   * git build of fef4ed9f154b169e43571e4d2e2a50efa0a8e105
 
- -- caktux (Buildserver key) <caktux@gmail.com>   Fri, 27 Feb 2015 23:39:58 +0000
+ -- caktux (Buildserver key) <caktux@gmail.com>  Fri, 27 Feb 2015 23:39:58 +0000
 
 cpp-ethereum (0.7.14+17trusty-0ubuntu1) trusty; urgency=medium
 
   * git build of a83eb07bc2ddc652fca93e7d0e50e509d7882b30
 
--- caktux (Buildserver key) <caktux@gmail.com>   Fri, 23 Jan 2015 06:38:29 +0000
+-- caktux (Buildserver key) <caktux@gmail.com>  Fri, 23 Jan 2015 06:38:29 +0000
 
 cpp-ethereum (0.3.11-0~trusty1) trusty; urgency=low
 
