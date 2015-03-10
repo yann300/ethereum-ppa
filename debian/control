@@ -13,8 +13,7 @@ Build-Depends: debhelper (>= 8.0.0),
                qtbase5-dev,
                qtdeclarative5-dev,
                qml-module-qtquick-controls,
-               qml-module-qtquick-dialogs,
-               # libqt5webengine5-dev
+               qml-module-qtquick-dialogs
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
 Vcs-Git: git://github.com/ethereum/go-ethereum.git
