@@ -2,7 +2,7 @@ Source: cpp-ethereum
 Section: science
 Priority: extra
 Maintainer: caktux (Buildserver key) <caktux@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webengine5-dev
+Build-Depends: debhelper (>= 8.0.0), libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev
 Standards-Version: 3.9.5
 Homepage: https://ethereum.org
 Vcs-Git: git://github.com/ethereum/cpp-ethereum.git
@@ -30,13 +30,13 @@ Description: Support libraries for cpp-ethereum.
 Package: libethereum-gui
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}), qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}), qt5-default, libqt5qml5, libqt5quick5
 Description: Support libraries for cpp-ethereum GUI.
  The future of computational social contracts.
 
 Package: libethereum-dev
 Section: libdevel
 Architecture: any
-Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qt5-default, qtbase5-dev, qtdeclarative5-dev, libqt5webengine5-dev
+Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qt5-default, qtbase5-dev, qtdeclarative5-dev
 Description: Development files for cpp-ethereum (CLI and GUI)
  The future of computational social contracts. DEV Files.
