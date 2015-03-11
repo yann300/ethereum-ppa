@@ -21,7 +21,7 @@ export DH_OPTIONS
 	dh $@
 
 override_dh_auto_configure:
-	cmake . -DCMAKE_BUILD_TYPE=Release -DHEADLESS=1
+	cmake . -DCMAKE_BUILD_TYPE=Release
 
 override_dh_auto_test:
 

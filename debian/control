@@ -2,7 +2,7 @@ Source: cpp-ethereum
 Section: science
 Priority: extra
 Maintainer: caktux (Buildserver key) <caktux@gmail.com>
-Build-Depends: debhelper (>= 8.0.0), libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev
+Build-Depends: debhelper (>= 8.0.0), libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qtbase5-dev, qt5-default, qtdeclarative5-dev, libqt5webengine5-dev
 Standards-Version: 3.9.5
 Homepage: https://ethereum.org
 Vcs-Git: git://github.com/ethereum/cpp-ethereum.git
@@ -10,33 +10,90 @@ Vcs-Browser: https://github.com/ethereum/cpp-ethereum
 
 Package: cpp-ethereum
 Architecture: any
+Depends: ${misc:Depends},
+         eth,
+         neth,
+         alethzero,
+         mix,
+         solc,
+         sc,
+         lllc,
+         rlp,
+         testeth
+Description: The full stack of cpp-ethereum binaries and libraries.
+ This package depends on all of the packages available in the cpp-ethereum release.
+
+Package: eth
+Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
-Description: Command line daemon, compilers and other binaries
+Description: Command line client (eth).
  Ethereum is based on a design in an original whitepaper by Vitalik Buterin. This implementation is based on the formal specification of a refinement of that idea detailed in the 'yellow paper' by Gavin Wood. Contributors, builders and testers include Alex Leverington (Clang & Mac building, client multiplexing), Tim Hughes (MSVC compilation & Dagger testing), caktux (ongoing CI), Christoph Jentzsch (tests), Christian Reissweiner (Solidity), Marek Kotewicz (external JS & JSON-RPC), Eric Lombrozo (MinGW32 cross-compilation), Marko Simovic (original CI), and several others.
 
-Package: cpp-ethereum-gui
+Package: neth
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
-Description: Reference GUI (AlethZero)
- AlethZero browser.
+Description: NEthereum ncurses client.
+ NEthereum ncurses client.
+
+Package: alethzero
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Description: AlethZero browser, the reference GUI for DApp developers.
+ AlethZero browser, the reference GUI for DApp developers.
+
+Package: mix
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Description: Mix IDE for DApp development.
+ Mix IDE for DApp development.
+
+Package: solc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Description: Solidity compiler (solc).
+ Solidity compiler (solc).
+
+Package: sc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Description: Serpent compiler (sc).
+ Serpent compiler (sc).
+
+Package: lllc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Description: LLL compiler (lllc).
+ LLL compiler (lllc).
+
+Package: rlp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Description: Ethereum RLP.
+ Ethereum RLP.
+
+Package: testeth
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Description: Ethereum testing (testeth).
+ Ethereum testing (testeth).
 
 Package: libethereum
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, libgmp10, libleveldb1, yasm, miniupnpc, libreadline6, libncurses5, libcurl3, libjsoncpp0, libargtable2-0, libmicrohttpd10
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, libgmp10, libleveldb1, yasm, libminiupnpc8, libreadline6, libncurses5, libcurl3, libjsoncpp0, libargtable2-0, libmicrohttpd10
 Description: Support libraries for cpp-ethereum.
- The future of computational social contracts.
+ Support libraries for cpp-ethereum, includes amongst others libp2p, libwebthree, libwhisper and soon libswarm.
 
 Package: libethereum-gui
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}), qt5-default, libqt5qml5, libqt5quick5
-Description: Support libraries for cpp-ethereum GUI.
- The future of computational social contracts.
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}), qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5
+Description: Support libraries for the AlethZero GUI and Mix IDE.
+ Support libraries for the AlethZero GUI and Mix IDE.
 
 Package: libethereum-dev
 Section: libdevel
 Architecture: any
-Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qt5-default, qtbase5-dev, qtdeclarative5-dev
+Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev, libjson-rpc-cpp-dev, cmake, build-essential, g++-4.8, git, libgmp-dev, libboost-all-dev, automake, unzip, libtool, libleveldb-dev, yasm, libminiupnpc-dev, libreadline-dev, scons, libncurses5-dev, libcurl4-openssl-dev, libjsoncpp-dev, libargtable2-dev, libmicrohttpd-dev, libboost-test-dev, qt5-default, qtbase5-dev, qtdeclarative5-dev, libqt5webengine5-dev
 Description: Development files for cpp-ethereum (CLI and GUI)
  The future of computational social contracts. DEV Files.
