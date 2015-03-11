@@ -1,4 +1,3 @@
-usr/include/*/qt5/Qt5WebEngineCore/*
 usr/include/*/qt5/QtWebEngine/*
 usr/include/*/qt5/QtWebEngineWidgets/*
 usr/lib/*/cmake/Qt5WebEngineCore/Qt5WebEngineCoreConfig.cmake
