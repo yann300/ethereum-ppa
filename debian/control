@@ -13,7 +13,8 @@ Build-Depends: debhelper (>= 8.0.0),
                qtbase5-dev,
                qtdeclarative5-dev,
                qml-module-qtquick-controls,
-               qml-module-qtquick-dialogs
+               qml-module-qtquick-dialogs,
+               libqt5webengine5-dev
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
 Vcs-Git: git://github.com/ethereum/go-ethereum.git
@@ -21,14 +22,22 @@ Vcs-Browser: https://github.com/ethereum/go-ethereum
 
 Package: ethereum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Built-Using: ${misc:Built-Using}
-Description: Ethereum Go client
- Ethereum CLI client.
+Depends: ${misc:Depends},
+         ethereum-cli,
+         mist
+Description: Minimal core of Qt5 release
+ This package depends on all of the packages in the Qt5 core system.
 
-Package: ethereum-gui
+Package: ethereum-cli
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Built-Using: ${misc:Built-Using}
-Description: Ethereum Go client GUI
- Ethereum GUI client (Mist).
+Description: Ethereum CLI client.
+ Ethereum CLI client.
+
+Package: mist
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5, qml-module-qtquick-controls, qml-module-qtquick-dialogs
+Built-Using: ${misc:Built-Using}
+Description: Mist browser, official Ethereum GUI client.
+ Mist browser, official Ethereum GUI client.

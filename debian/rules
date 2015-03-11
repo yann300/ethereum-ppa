@@ -14,7 +14,7 @@ export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE):$(CURDIR)/obj-$(DEB_BUILD_G
 
 override_dh_auto_build:
 	go build -v github.com/ethereum/go-ethereum/cmd/ethereum
-	# go build -v github.com/ethereum/go-ethereum/cmd/mist
+	go build -v github.com/ethereum/go-ethereum/cmd/mist
 
 override_dh_auto_install:
 	# just install binaries and copy assets
