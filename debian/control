@@ -27,8 +27,8 @@ Architecture: any
 Depends: ${misc:Depends},
          ethereum-cli,
          mist
-Description: Minimal core of Qt5 release
- This package depends on all of the packages in the Qt5 core system.
+Description: Meta-package to install ethereum (CLI) and mist (GUI)
+ Meta-package to install ethereum (CLI) and mist (GUI)
 
 Package: ethereum-cli
 Architecture: any
