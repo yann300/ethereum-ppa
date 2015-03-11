@@ -24,6 +24,7 @@ override_dh_auto_configure:
 	cmake . -DCMAKE_BUILD_TYPE=Release
 
 override_dh_auto_install:
+	dh_auto_install
 	mkdir -p debian/tmp/usr/share/testeth
 	cp -a test/*.json debian/tmp/usr/share/testeth/
 
