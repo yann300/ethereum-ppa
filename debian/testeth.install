@@ -1,1 +1,2 @@
-usr/local/bin/testeth usr/bin
+test/testeth usr/bin
+usr/share/testeth
