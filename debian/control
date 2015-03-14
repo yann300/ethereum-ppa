@@ -87,7 +87,7 @@ Description: Support libraries for cpp-ethereum.
 Package: libethereum-gui
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}), qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5, qml-module-qtquick-controls, qml-module-qtquick-dialogs, qml-module-qtquick-layouts, qml-module-qt-labs-settings
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}), qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5, qml-module-qtquick-controls, qml-module-qtquick-dialogs, qml-module-qtquick-layouts, qml-module-qt-labs-settings, qml-module-qtwebengine
 Description: Support libraries for the AlethZero GUI and Mix IDE.
  Support libraries for the AlethZero GUI and Mix IDE.
 
