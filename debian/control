@@ -35,8 +35,8 @@ Build-Depends: binutils-gold,
                libpci-dev,
                libpng-dev,
                libpulse-dev,
-               libqt5opengl5-dev (>= 5.4.0+dfsg~),
-               libqt5xmlpatterns5-private-dev (>= 5.4.0~),
+               libqt5opengl5-dev (>= 5.4.1+dfsg~),
+               libqt5xmlpatterns5-private-dev (>= 5.4.1~),
                libssl-dev,
                libstdc++6,
                libsqlite3-dev,
@@ -51,12 +51,12 @@ Build-Depends: binutils-gold,
                pkg-kde-tools (>= 0.6.4),
                python-minimal,
                python2.7,
-               qtbase5-private-dev (>= 5.4.0+dfsg~),
-               qtdeclarative5-private-dev (>= 5.4.0~),
-               qtscript5-private-dev (>= 5.4.0~),
+               qtbase5-private-dev (>= 5.4.1+dfsg~),
+               qtdeclarative5-private-dev (>= 5.4.1~),
+               qtscript5-private-dev (>= 5.4.1~),
                re2c,
                ruby
-Build-Depends-Indep: qtbase5-doc-html (>= 5.4.0+dfsg~)
+Build-Depends-Indep: qtbase5-doc-html (>= 5.4.1+dfsg~)
 Standards-Version: 3.9.6
 Section: libs
 Homepage: http://trac.webengine.org/wiki/QtWebEngine
