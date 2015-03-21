@@ -16,6 +16,8 @@ Build-Depends: debhelper (>= 8.0.0),
                qtdeclarative5-dev,
                qml-module-qtquick-controls,
                qml-module-qtquick-dialogs,
+               qml-module-qt-websockets,
+               libqt5websockets5-dev,
                libqt5webengine5-dev
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
@@ -39,7 +41,7 @@ Description: Ethereum CLI client.
 
 Package: mist
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5, qml-module-qtquick-controls, qml-module-qtquick-dialogs
+Depends: ${shlibs:Depends}, ${misc:Depends}, qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5, qml-module-qtquick-controls, qml-module-qtquick-dialogs, qml-module-qt-websockets
 Built-Using: ${misc:Built-Using}
 Description: Mist browser, official Ethereum GUI client.
  Mist browser, official Ethereum GUI client.
