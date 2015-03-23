@@ -18,7 +18,6 @@ Depends: ${misc:Depends},
          solc,
          sc,
          lllc,
-         rlp,
          testeth
 Description: The full stack of cpp-ethereum binaries and libraries.
  This package depends on all of the packages available in the cpp-ethereum release.
@@ -64,12 +63,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
 Description: LLL compiler (lllc).
  LLL compiler (lllc).
-
-Package: rlp
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
-Description: Ethereum RLP.
- Ethereum RLP.
 
 Package: testeth
 Architecture: any
