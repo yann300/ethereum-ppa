@@ -33,7 +33,7 @@ Depends: ${misc:Depends},
 Description: Meta-package to install ethereum (CLI) and mist (GUI)
  Meta-package to install ethereum (CLI) and mist (GUI)
 
-Package: ethereum-cli
+Package: geth
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Built-Using: ${misc:Built-Using}
