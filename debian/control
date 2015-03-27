@@ -28,7 +28,7 @@ Vcs-Browser: https://github.com/ethereum/go-ethereum
 Package: ethereum
 Architecture: any
 Depends: ${misc:Depends},
-         ethereum-cli,
+         geth,
          mist
 Description: Meta-package to install ethereum (CLI) and mist (GUI)
  Meta-package to install ethereum (CLI) and mist (GUI)
