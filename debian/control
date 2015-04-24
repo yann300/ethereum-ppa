@@ -31,7 +31,7 @@ Description: Command line client (eth).
 
 Package: neth
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: NEthereum ncurses client.
  NEthereum ncurses client.
 
@@ -49,33 +49,39 @@ Description: Mix IDE for DApp development.
 
 Package: solc
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Solidity compiler (solc).
  Solidity compiler (solc).
 
 Package: sc
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Serpent compiler (sc).
  Serpent compiler (sc).
 
 Package: lllc
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: LLL compiler (lllc).
  LLL compiler (lllc).
 
 Package: rlp
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Ethereum RLP.
  Ethereum RLP.
 
 Package: testeth
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Ethereum testing (testeth).
  Ethereum testing (testeth).
+
+Package: ethminer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
+Description: Ethereum Miner.
+ Ethereum Miner.
 
 Package: libethereum
 Section: libdevel

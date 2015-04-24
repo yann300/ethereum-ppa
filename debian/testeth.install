@@ -1,2 +1,3 @@
+usr/local/bin/ethrpctest usr/bin
 test/testeth usr/bin
 usr/share/testeth
