@@ -14,6 +14,7 @@ Depends: ${misc:Depends},
          eth,
          neth,
          ethminer,
+         ethkey,
          alethzero,
          mix,
          solc,
@@ -83,6 +84,12 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Ethereum Miner.
  Ethereum Miner.
+
+Package: ethkey
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
+Description: Ethereum Key Utility.
+ Ethereum Key Utility.
 
 Package: libethereum
 Section: libdevel
