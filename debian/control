@@ -29,6 +29,7 @@ Package: ethereum
 Architecture: any
 Depends: ${misc:Depends},
          geth,
+         console,
          bootnode,
          evm,
          disasm,
@@ -44,6 +45,13 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, ttf-ancient-fonts
 Built-Using: ${misc:Built-Using}
 Description: Ethereum CLI client.
  Ethereum CLI client.
+
+Package: console
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ttf-ancient-fonts
+Built-Using: ${misc:Built-Using}
+Description: Ethereum console.
+ Ethereum console.
 
 Package: bootnode
 Architecture: any
