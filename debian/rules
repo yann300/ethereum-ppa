@@ -13,7 +13,12 @@ export DH_GOLANG_INSTALL_ALL := 1
 export GOPATH := $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE):$(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)/src/github.com/ethereum/go-ethereum/Godeps/_workspace
 
 override_dh_auto_build:
+	go build -v github.com/ethereum/go-ethereum/cmd/evm
 	go build -v github.com/ethereum/go-ethereum/cmd/geth
+	go build -v github.com/ethereum/go-ethereum/cmd/disasm
+	go build -v github.com/ethereum/go-ethereum/cmd/rlpdump
+	go build -v github.com/ethereum/go-ethereum/cmd/ethtest
+	go build -v github.com/ethereum/go-ethereum/cmd/bootnode
 	go build -v github.com/ethereum/go-ethereum/cmd/mist
 
 override_dh_auto_install:
