@@ -29,6 +29,11 @@ Package: ethereum
 Architecture: any
 Depends: ${misc:Depends},
          geth,
+         bootnode,
+         evm,
+         disasm,
+         rlpdump,
+         ethtest,
          mist
 Description: Meta-package to install ethereum (CLI) and mist (GUI)
  Meta-package to install ethereum (CLI) and mist (GUI)
@@ -39,6 +44,41 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, ttf-ancient-fonts
 Built-Using: ${misc:Built-Using}
 Description: Ethereum CLI client.
  Ethereum CLI client.
+
+Package: bootnode
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ttf-ancient-fonts
+Built-Using: ${misc:Built-Using}
+Description: Ethereum bootnode.
+ Ethereum bootnode.
+
+Package: evm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: Ethereum evm tool.
+ Ethereum evm tool.
+
+Package: disasm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: Ethereum disasm tool.
+ Ethereum disasm tool.
+
+Package: rlpdump
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: Ethereum rlpdump tool.
+ Ethereum rlpdump tool.
+
+Package: ethtest
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: Ethereum ethtest tool.
+ Ethereum ethtest tool.
 
 Package: mist
 Architecture: any
