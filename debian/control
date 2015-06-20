@@ -7,19 +7,7 @@ Build-Depends: debhelper (>= 8.0.0),
                golang,
                golang-godebiancontrol-dev,
                libgmp3-dev,
-               libreadline6-dev,
-               pkg-config, libpcre3-dev, libpcre++-dev,
-               qt5-default,
-               qtbase5-dev,
-               qtbase5-private-dev,
-               libqt5opengl5-dev,
-               qtdeclarative5-dev,
-               qml-module-qtquick-controls,
-               qml-module-qtquick-dialogs,
-               qml-module-qt-websockets,
-               qml-module-qtwebengine,
-               libqt5websockets5-dev,
-               libqt5webengine5-dev
+               libreadline6-dev
 Standards-Version: 3.9.5
 Homepage: http://ethereum.org
 Vcs-Git: git://github.com/ethereum/go-ethereum.git
@@ -34,10 +22,9 @@ Depends: ${misc:Depends},
          evm,
          disasm,
          rlpdump,
-         ethtest,
-         mist
-Description: Meta-package to install ethereum (CLI) and mist (GUI)
- Meta-package to install ethereum (CLI) and mist (GUI)
+         ethtest
+Description: Meta-package to install geth (CLI), console and other tools
+ Meta-package to install geth (CLI), console and other tools
 
 Package: geth
 Architecture: any
@@ -87,10 +74,3 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Built-Using: ${misc:Built-Using}
 Description: Ethereum ethtest tool.
  Ethereum ethtest tool.
-
-Package: mist
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, qt5-default, libqt5qml5, libqt5quick5, libqt5webengine5, qml-module-qtquick-controls, qml-module-qtquick-dialogs, qml-module-qt-websockets, qml-module-qtwebengine
-Built-Using: ${misc:Built-Using}
-Description: Mist browser, official Ethereum GUI client.
- Mist browser, official Ethereum GUI client.

@@ -20,7 +20,6 @@ override_dh_auto_build:
 	go build -v github.com/ethereum/go-ethereum/cmd/rlpdump
 	go build -v github.com/ethereum/go-ethereum/cmd/ethtest
 	go build -v github.com/ethereum/go-ethereum/cmd/bootnode
-	go build -v github.com/ethereum/go-ethereum/cmd/mist
 
 override_dh_auto_install:
 	# just install binaries and copy assets
