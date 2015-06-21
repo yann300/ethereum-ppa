@@ -22,9 +22,7 @@ override_dh_auto_build:
 	go build -v github.com/ethereum/go-ethereum/cmd/bootnode
 
 override_dh_auto_install:
-	# just install binaries and copy assets
-	mkdir -p debian/tmp/usr/share/mist
-	cp -a github.com/ethereum/go-ethereum/cmd/mist/assets/* debian/tmp/usr/share/mist/
+	# just install binaries
 
 override_dh_auto_test:
 
