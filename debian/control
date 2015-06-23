@@ -22,8 +22,8 @@ Depends: ${misc:Depends},
          disasm,
          rlpdump,
          ethtest
-Description: Meta-package to install geth (CLI), console and other tools
- Meta-package to install geth (CLI), console and other tools
+Description: Meta-package to install geth (CLI) and other tools
+ Meta-package to install geth (CLI)  and other tools
 
 Package: geth
 Architecture: any
