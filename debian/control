@@ -138,24 +138,10 @@ Section: libdevel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libcryptopp-dev,
-         libjson-rpc-cpp-dev,
-         libgmp10,
-         libleveldb1,
-         yasm,
-         miniupnpc,
-         libjsoncpp0,
-         libargtable2-0,
-         libmicrohttpd10
-Description: Support libraries for cpp-ethereum.
- Support libraries for cpp-ethereum, includes amongst others libp2p, libwebthree, libwhisper and soon libswarm.
-
-Package: libethereum
-Section: libdevel
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
-         libcryptopp-dev,
          libgmp10,
          libargtable2-0
+Description: Support libraries for cpp-ethereum.
+ Support libraries for cpp-ethereum, includes amongst others libp2p, libwebthree, libwhisper and soon libswarm.
 
 Package: libethereum-gui
 Section: libdevel
