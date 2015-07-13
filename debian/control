@@ -87,7 +87,7 @@ Description: Mix IDE for DApp development.
 
 Package: ethminer
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
 Description: Ethereum Miner.
  Ethereum Miner.
 
