@@ -123,7 +123,7 @@ Description: Ethereum RLP.
 
 Package: ethvm
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
 Description: Ethereum VM Utility.
  Ethereum VM Utility.
 
