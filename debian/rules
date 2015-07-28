@@ -21,7 +21,7 @@ export DH_OPTIONS
 	dh $@
 
 override_dh_auto_configure:
-	cmake . -DCMAKE_BUILD_TYPE=Release -DBUNDLE=release -DFATDB=1 -DSERPENT=1
+	cmake . -DCMAKE_BUILD_TYPE=Release -DEVMJIT=0 -DSERPENT=1
 
 override_dh_auto_install:
 	dh_auto_install
