@@ -84,7 +84,9 @@ ifneq (,$(filter $(DEB_HOST_ARCH),$(golang_archs)))
 	[ -f VERSION ] || echo "debian snapshot +$$(dpkg-parsechangelog -SVersion)" > VERSION
 	rm -f debian/build.stamp
 	mkdir -p $(GOBIN)
-	export GOROOT_BOOTSTRAP=/usr && cd src && bash ./make.bash --no-banner
+	mkdir -p /usr/lib/go/bin
+	ln -s /usr/bin/go /usr/lib/go/bin/go
+	export GOROOT_BOOTSTRAP=$$(env -i go env GOROOT) && cd src && bash ./make.bash --no-banner
 	>debian/build.stamp
 else
 	touch debian/build.stamp
