@@ -23,7 +23,6 @@ Build-Depends: debhelper (>= 8.0.0),
                libjsoncpp-dev,
                libargtable2-dev,
                libmicrohttpd-dev,
-               libboost-test-dev,
                qtbase5-dev,
                qt5-default,
                qtdeclarative5-dev,
@@ -47,12 +46,11 @@ Depends: ${misc:Depends},
          ethkey,
          ethvm,
          alethzero,
+         alethone,
          mix,
          solc,
-         sc,
          lllc,
-         rlp,
-         testeth
+         rlp
 Description: The full stack of cpp-ethereum binaries and libraries.
  This package depends on all of the packages available in the cpp-ethereum release.
 
@@ -75,13 +73,28 @@ Description: Command line client (eth).
 
 Package: alethzero
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
+         libqt5webengine5
 Description: AlethZero browser, the reference GUI for DApp developers.
  AlethZero browser, the reference GUI for DApp developers.
 
-Package: mix
+Package: alethone
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version})
+Description: AlethOne basic Ethereum GUI
+ AlethOne basic Ethereum GUI
+
+Package: mix
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
+         libqt5qml5,
+         libqt5quick5,
+         libqt5webengine5,
+         qml-module-qtquick-controls,
+         qml-module-qtquick-dialogs,
+         qml-module-qtquick-layouts,
+         qml-module-qt-labs-settings,
+         qml-module-qtwebengine
 Description: Mix IDE for DApp development.
  Mix IDE for DApp development.
 
@@ -103,12 +116,6 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Solidity compiler (solc).
  Solidity compiler (solc).
 
-Package: sc
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
-Description: Serpent compiler (sc).
- Serpent compiler (sc).
-
 Package: lllc
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
@@ -127,12 +134,6 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
 Description: Ethereum VM Utility.
  Ethereum VM Utility.
 
-Package: testeth
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
-Description: Ethereum testing (testeth).
- Ethereum testing (testeth).
-
 Package: libethereum
 Section: libdevel
 Architecture: any
@@ -149,17 +150,9 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libethereum (= ${binary:Version}),
          libv8-dev,
-         qt5-default,
-         libqt5qml5,
-         libqt5quick5,
-         libqt5webengine5,
-         qml-module-qtquick-controls,
-         qml-module-qtquick-dialogs,
-         qml-module-qtquick-layouts,
-         qml-module-qt-labs-settings,
-         qml-module-qtwebengine
-Description: Support libraries for the AlethZero GUI and Mix IDE.
- Support libraries for the AlethZero GUI and Mix IDE.
+         qt5-default
+Description: Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
+ Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
 
 Package: libethereum-dev
 Section: libdevel
@@ -184,7 +177,6 @@ Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, 
          libjsoncpp-dev,
          libargtable2-dev,
          libmicrohttpd-dev,
-         libboost-test-dev,
          qt5-default,
          qtbase5-dev,
          qtdeclarative5-dev,
