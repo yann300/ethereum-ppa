@@ -94,7 +94,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version
          qml-module-qtquick-dialogs,
          qml-module-qtquick-layouts,
          qml-module-qt-labs-settings,
-         qml-module-qtwebengine
+         qml-module-qtwebengine,
+         libqt5qml-graphicaleffects
 Description: Mix IDE for DApp development.
  Mix IDE for DApp development.
 
