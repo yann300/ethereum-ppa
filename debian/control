@@ -112,7 +112,6 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}),
          libglu1-mesa,
          freeglut3,
          ocl-icd-libopencl1
-
 Description: Ethereum Miner.
  Ethereum Miner.
 
