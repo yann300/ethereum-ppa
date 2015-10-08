@@ -101,7 +101,18 @@ Description: Mix IDE for DApp development.
 
 Package: ethminer
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}),
+         miniupnpc,
+         libleveldb1,
+         libreadline6,
+         libjsoncpp0,
+         libmicrohttpd10,
+         libcurl3,
+         libjson-rpc-cpp-dev,
+         libglu1-mesa,
+         freeglut3,
+         ocl-icd-libopencl1
+
 Description: Ethereum Miner.
  Ethereum Miner.
 
