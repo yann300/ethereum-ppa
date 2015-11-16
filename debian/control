@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: caktux (Buildserver key) <caktux@gmail.com>
 Build-Depends: debhelper (>= 8.0.0),
                libcryptopp-dev,
-               libjson-rpc-cpp-dev,
+               libjsonrpccpp-dev,
                cmake,
                build-essential,
                g++-4.8,
@@ -59,12 +59,13 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libethereum (= ${binary:Version}),
          miniupnpc,
-         libleveldb1,
+         libleveldb1v5,
          libreadline6,
-         libjsoncpp0,
+         libjsoncpp0v5,
          libmicrohttpd10,
          libcurl3,
-         libjson-rpc-cpp-dev,
+         libjsonrpccpp-client0,
+         libjsonrpccpp-server0,
          libglu1-mesa,
          freeglut3,
          ocl-icd-libopencl1
@@ -103,12 +104,13 @@ Package: ethminer
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}),
          miniupnpc,
-         libleveldb1,
+         libleveldb1v5,
          libreadline6,
-         libjsoncpp0,
+         libjsoncpp0v5,
          libmicrohttpd10,
          libcurl3,
-         libjson-rpc-cpp-dev,
+         libjsonrpccpp-client0,
+         libjsonrpccpp-server0,
          libglu1-mesa,
          freeglut3,
          ocl-icd-libopencl1
@@ -168,8 +170,8 @@ Description: Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
 Package: libethereum-dev
 Section: libdevel
 Architecture: any
-Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev,
-         libjson-rpc-cpp-dev,
+Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcrypt++-dev,
+         libjsonrpccpp-dev,
          cmake,
          build-essential,
          g++-4.8,
