@@ -39,7 +39,7 @@ Vcs-Git: git://github.com/ethereum/webthree-umbrella.git
 Vcs-Browser: https://github.com/ethereum/webthree-umbrella
 
 Package: cpp-ethereum
-Architecture: i386 amd64
+Architecture: any-i386 any-amd64
 Multi-Arch: same
 Depends: ${misc:Depends},
          eth,
