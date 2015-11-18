@@ -39,7 +39,8 @@ Vcs-Git: git://github.com/ethereum/cpp-ethereum.git
 Vcs-Browser: https://github.com/ethereum/cpp-ethereum
 
 Package: cpp-ethereum
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${misc:Depends},
          eth,
          ethminer,
