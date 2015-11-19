@@ -56,7 +56,8 @@ Description: The full stack of cpp-ethereum binaries and libraries.
  This package depends on all of the packages available in the cpp-ethereum release.
 
 Package: eth
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libethereum (= ${binary:Version}),
          miniupnpc,
@@ -73,20 +74,23 @@ Description: Command line client (eth).
  Ethereum is based on a design in an original whitepaper by Vitalik Buterin. This implementation is based on the formal specification of a refinement of that idea detailed in the 'yellow paper' by Gavin Wood. Contributors, builders and testers include Alex Leverington (Clang & Mac building, client multiplexing), Tim Hughes (MSVC compilation & Dagger testing), caktux (ongoing CI), Christoph Jentzsch (tests), Christian Reissweiner (Solidity), Marek Kotewicz (external JS & JSON-RPC), Eric Lombrozo (MinGW32 cross-compilation), Marko Simovic (original CI), and several others.
 
 Package: alethzero
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
          libqt5webengine5
 Description: AlethZero browser, the reference GUI for DApp developers.
  AlethZero browser, the reference GUI for DApp developers.
 
 Package: alethone
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version})
 Description: AlethOne basic Ethereum GUI
  AlethOne basic Ethereum GUI
 
 Package: mix
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
          libqt5qml5,
          libqt5quick5,
@@ -101,7 +105,8 @@ Description: Mix IDE for DApp development.
  Mix IDE for DApp development.
 
 Package: ethminer
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}),
          miniupnpc,
          libleveldb1,
@@ -117,38 +122,44 @@ Description: Ethereum Miner.
  Ethereum Miner.
 
 Package: ethkey
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Ethereum Key Utility.
  Ethereum Key Utility.
 
 Package: solc
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Solidity compiler (solc).
  Solidity compiler (solc).
 
 Package: lllc
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: LLL compiler (lllc).
  LLL compiler (lllc).
 
 Package: rlp
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Ethereum RLP.
  Ethereum RLP.
 
 Package: ethvm
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
 Description: Ethereum VM Utility.
  Ethereum VM Utility.
 
 Package: libethereum
 Section: libdevel
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libcryptopp-dev,
          libgmp10,
@@ -158,7 +169,8 @@ Description: Support libraries for cpp-ethereum.
 
 Package: libethereum-gui
 Section: libdevel
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libethereum (= ${binary:Version}),
          libv8-dev,
@@ -168,7 +180,8 @@ Description: Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
 
 Package: libethereum-dev
 Section: libdevel
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev,
          libjson-rpc-cpp-dev,
          cmake,
