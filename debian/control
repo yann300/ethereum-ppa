@@ -51,8 +51,7 @@ Depends: ${misc:Depends},
          mix,
          solc,
          lllc,
-         rlp,
-		 flu
+         rlp
 Description: The full stack of cpp-ethereum binaries and libraries.
  This package depends on all of the packages available in the cpp-ethereum release.
 
@@ -72,24 +71,6 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
          freeglut3,
          ocl-icd-libopencl1
 Description: Command line client (eth).
- Ethereum is based on a design in an original whitepaper by Vitalik Buterin. This implementation is based on the formal specification of a refinement of that idea detailed in the 'yellow paper' by Gavin Wood. Contributors, builders and testers include Alex Leverington (Clang & Mac building, client multiplexing), Tim Hughes (MSVC compilation & Dagger testing), caktux (ongoing CI), Christoph Jentzsch (tests), Christian Reissweiner (Solidity), Marek Kotewicz (external JS & JSON-RPC), Eric Lombrozo (MinGW32 cross-compilation), Marko Simovic (original CI), and several others.
-
-Package: flu
-Architecture: any-i386 any-amd64
-Multi-Arch: same
-Depends: ${shlibs:Depends}, ${misc:Depends},
-         libethereum (= ${binary:Version}),
-         miniupnpc,
-         libleveldb1,
-         libreadline6,
-         libjsoncpp0,
-         libmicrohttpd10,
-         libcurl3,
-         libjson-rpc-cpp-dev,
-         libglu1-mesa,
-         freeglut3,
-         ocl-icd-libopencl1
-Description: Experimental Ethereum client with Proof of Authority consensus.
  Ethereum is based on a design in an original whitepaper by Vitalik Buterin. This implementation is based on the formal specification of a refinement of that idea detailed in the 'yellow paper' by Gavin Wood. Contributors, builders and testers include Alex Leverington (Clang & Mac building, client multiplexing), Tim Hughes (MSVC compilation & Dagger testing), caktux (ongoing CI), Christoph Jentzsch (tests), Christian Reissweiner (Solidity), Marek Kotewicz (external JS & JSON-RPC), Eric Lombrozo (MinGW32 cross-compilation), Marko Simovic (original CI), and several others.
 
 Package: alethzero
