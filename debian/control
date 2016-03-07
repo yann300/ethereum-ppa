@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: caktux (Buildserver key) <caktux@gmail.com>
 Build-Depends: debhelper (>= 8.0.0),
                libcryptopp-dev,
-               libjson-rpc-cpp-dev,
+               libjsonrpccpp-dev,
                cmake,
                build-essential,
                g++-4.8,
@@ -23,7 +23,6 @@ Build-Depends: debhelper (>= 8.0.0),
                libjsoncpp-dev,
                libargtable2-dev,
                libmicrohttpd-dev,
-               libboost-test-dev,
                qtbase5-dev,
                qt5-default,
                qtdeclarative5-dev,
@@ -36,37 +35,39 @@ Build-Depends: debhelper (>= 8.0.0),
                opencl-headers
 Standards-Version: 3.9.5
 Homepage: https://ethereum.org
-Vcs-Git: git://github.com/ethereum/cpp-ethereum.git
-Vcs-Browser: https://github.com/ethereum/cpp-ethereum
+Vcs-Git: git://github.com/ethereum/webthree-umbrella.git
+Vcs-Browser: https://github.com/ethereum/webthree-umbrella
 
 Package: cpp-ethereum
-Architecture: any
+Architecture: i386 amd64
+Multi-Arch: same
 Depends: ${misc:Depends},
          eth,
          ethminer,
          ethkey,
          ethvm,
          alethzero,
+         alethone,
          mix,
          solc,
-         sc,
          lllc,
-         rlp,
-         testeth
+         rlp
 Description: The full stack of cpp-ethereum binaries and libraries.
  This package depends on all of the packages available in the cpp-ethereum release.
 
 Package: eth
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libethereum (= ${binary:Version}),
          miniupnpc,
-         libleveldb1,
+         libleveldb1v5,
          libreadline6,
-         libjsoncpp0,
+         libjsoncpp0v5,
          libmicrohttpd10,
          libcurl3,
-         libjson-rpc-cpp-dev,
+         libjsonrpccpp-client0,
+         libjsonrpccpp-server0,
          libglu1-mesa,
          freeglut3,
          ocl-icd-libopencl1
@@ -74,68 +75,93 @@ Description: Command line client (eth).
  Ethereum is based on a design in an original whitepaper by Vitalik Buterin. This implementation is based on the formal specification of a refinement of that idea detailed in the 'yellow paper' by Gavin Wood. Contributors, builders and testers include Alex Leverington (Clang & Mac building, client multiplexing), Tim Hughes (MSVC compilation & Dagger testing), caktux (ongoing CI), Christoph Jentzsch (tests), Christian Reissweiner (Solidity), Marek Kotewicz (external JS & JSON-RPC), Eric Lombrozo (MinGW32 cross-compilation), Marko Simovic (original CI), and several others.
 
 Package: alethzero
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version})
+Architecture: any-i386 any-amd64
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
+         libqt5webengine5
 Description: AlethZero browser, the reference GUI for DApp developers.
  AlethZero browser, the reference GUI for DApp developers.
 
-Package: mix
-Architecture: any
+Package: alethone
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version})
+Description: AlethOne basic Ethereum GUI
+ AlethOne basic Ethereum GUI
+
+Package: mix
+Architecture: any-i386 any-amd64
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
+         libqt5qml5,
+         libqt5quick5,
+         libqt5webengine5,
+         qml-module-qtquick-controls,
+         qml-module-qtquick-dialogs,
+         qml-module-qtquick-layouts,
+         qml-module-qt-labs-settings,
+         qml-module-qtwebengine,
+         libqt5qml-graphicaleffects
 Description: Mix IDE for DApp development.
  Mix IDE for DApp development.
 
 Package: ethminer
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
+Architecture: any-i386 any-amd64
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version}),
+         miniupnpc,
+         libleveldb1v5,
+         libreadline6,
+         libjsoncpp0v5,
+         libmicrohttpd10,
+         libcurl3,
+         libjsonrpccpp-client0,
+         libjsonrpccpp-server0,
+         libglu1-mesa,
+         freeglut3,
+         ocl-icd-libopencl1
 Description: Ethereum Miner.
  Ethereum Miner.
 
 Package: ethkey
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Ethereum Key Utility.
  Ethereum Key Utility.
 
 Package: solc
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Solidity compiler (solc).
  Solidity compiler (solc).
 
-Package: sc
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
-Description: Serpent compiler (sc).
- Serpent compiler (sc).
-
 Package: lllc
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: LLL compiler (lllc).
  LLL compiler (lllc).
 
 Package: rlp
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum (= ${binary:Version})
 Description: Ethereum RLP.
  Ethereum RLP.
 
 Package: ethvm
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
 Description: Ethereum VM Utility.
  Ethereum VM Utility.
 
-Package: testeth
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, eth (= ${binary:Version})
-Description: Ethereum testing (testeth).
- Ethereum testing (testeth).
-
 Package: libethereum
 Section: libdevel
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libcryptopp-dev,
          libgmp10,
@@ -145,27 +171,21 @@ Description: Support libraries for cpp-ethereum.
 
 Package: libethereum-gui
 Section: libdevel
-Architecture: any
+Architecture: any-i386 any-amd64
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libethereum (= ${binary:Version}),
          libv8-dev,
-         qt5-default,
-         libqt5qml5,
-         libqt5quick5,
-         libqt5webengine5,
-         qml-module-qtquick-controls,
-         qml-module-qtquick-dialogs,
-         qml-module-qtquick-layouts,
-         qml-module-qt-labs-settings,
-         qml-module-qtwebengine
-Description: Support libraries for the AlethZero GUI and Mix IDE.
- Support libraries for the AlethZero GUI and Mix IDE.
+         qt5-default
+Description: Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
+ Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
 
 Package: libethereum-dev
 Section: libdevel
-Architecture: any
-Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcryptopp-dev,
-         libjson-rpc-cpp-dev,
+Architecture: any-i386 any-amd64
+Multi-Arch: same
+Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, libcrypt++-dev,
+         libjsonrpccpp-dev,
          cmake,
          build-essential,
          g++-4.8,
@@ -184,7 +204,6 @@ Depends: libethereum (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, 
          libjsoncpp-dev,
          libargtable2-dev,
          libmicrohttpd-dev,
-         libboost-test-dev,
          qt5-default,
          qtbase5-dev,
          qtdeclarative5-dev,
