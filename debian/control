@@ -47,7 +47,6 @@ Depends: ${misc:Depends},
          ethkey,
          ethvm,
          alethzero,
-         alethone,
          mix,
          solc,
          lllc,
@@ -81,13 +80,6 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version
          libqt5webengine5
 Description: AlethZero browser, the reference GUI for DApp developers.
  AlethZero browser, the reference GUI for DApp developers.
-
-Package: alethone
-Architecture: any-i386 any-amd64
-Multi-Arch: same
-Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version})
-Description: AlethOne basic Ethereum GUI
- AlethOne basic Ethereum GUI
 
 Package: mix
 Architecture: any-i386 any-amd64
