@@ -27,7 +27,6 @@ Build-Depends: debhelper (>= 8.0.0),
                qt5-default,
                qtdeclarative5-dev,
                libqt5webengine5-dev,
-               libv8-dev,
                libglu1-mesa-dev,
                freeglut3-dev,
                mesa-common-dev,
@@ -167,7 +166,6 @@ Architecture: any-i386 any-amd64
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
          libethereum (= ${binary:Version}),
-         libv8-dev,
          qt5-default
 Description: Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
  Support libraries for the AlethZero, AlethOne GUIs and Mix IDE.
