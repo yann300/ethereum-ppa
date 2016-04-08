@@ -46,7 +46,7 @@ Depends: ${misc:Depends},
          ethkey,
          ethvm,
          alethzero,
-         mix,
+         mix-ide,
          solc,
          lllc,
          rlp
@@ -79,7 +79,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version
 Description: AlethZero browser, the reference GUI for DApp developers.
  AlethZero browser, the reference GUI for DApp developers.
 
-Package: mix
+Package: mix-ide
 Architecture: any-i386 any-amd64
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
