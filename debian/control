@@ -79,7 +79,16 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version
 Description: AlethZero browser, the reference GUI for DApp developers.
  AlethZero browser, the reference GUI for DApp developers.
 
+Package: mix
+Depends: mix-ide, ${misc:Depends}
+Architecture: any-i386 any-amd64
+Multi-Arch: same
+Description: transitional dummy package (naming change)
+ This is a transitional dummy package (naming change). It can safely be removed.
+
 Package: mix-ide
+Replaces: mix
+Breaks: mix
 Architecture: any-i386 any-amd64
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}, libethereum-gui (= ${binary:Version}), eth (= ${binary:Version}),
